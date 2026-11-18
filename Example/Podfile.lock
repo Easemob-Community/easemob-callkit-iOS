@@ -1,0 +1,44 @@
+PODS:
+  - EaseCallUIKit/APNs (4.23.0):
+    - EaseCallUIKit/Core
+  - EaseCallUIKit/AppleCallKit (4.23.0):
+    - EaseCallUIKit/VoIP
+  - EaseCallUIKit/Core (4.23.0):
+    - HyphenateChat (= 4.26.0)
+    - ShengwangRtcEngine_iOS/RtcBasic (= 4.6.2)
+  - EaseCallUIKit/LiveCommunicationKit (4.23.0):
+    - EaseCallUIKit/VoIP
+  - EaseCallUIKit/Overseas (4.23.0):
+    - EaseCallUIKit/APNs
+    - EaseCallUIKit/AppleCallKit
+    - EaseCallUIKit/LiveCommunicationKit
+  - EaseCallUIKit/VoIP (4.23.0):
+    - EaseCallUIKit/Core
+  - HyphenateChat (4.26.0):
+    - ShengwangInfra_iOS (~> 1.3.0)
+  - ShengwangInfra_iOS (1.3.5)
+  - ShengwangRtcEngine_iOS/RtcBasic (4.6.2):
+    - ShengwangInfra_iOS (= 1.3.5)
+
+DEPENDENCIES:
+  - EaseCallUIKit/Overseas (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - HyphenateChat
+    - ShengwangInfra_iOS
+    - ShengwangRtcEngine_iOS
+
+EXTERNAL SOURCES:
+  EaseCallUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EaseCallUIKit: a4a6d04db3a4565cde0fcd759da5d8f134b28fd4
+  HyphenateChat: 4fc6406218d56601be56e2ca594fa2595978836f
+  ShengwangInfra_iOS: 0ae2d429ec428cdbaebb39ac883ec64c5c20f7bb
+  ShengwangRtcEngine_iOS: f2f2ae79c5909bb51d138bb4ec62c6761c0ab9a3
+
+PODFILE CHECKSUM: dfa276b8bf2f6ddd607299f2e18b4e4b167c730c
+
+COCOAPODS: 1.16.2

@@ -1,0 +1,15 @@
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+/Example/build/
+/Example/Pods/
+.omx/
+.build/
+.swiftpm/
+/Package.resolved
+!/Example/Podfile.lock
+
+*.mobileprovision
+*.p12
+*.p8

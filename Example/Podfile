@@ -1,0 +1,21 @@
+use_frameworks!
+
+platform :ios, '15.0'
+
+target 'EaseCallUIKit_Example' do
+  variant = ENV.fetch('EASE_CALL_UIKIT_VARIANT', 'Default')
+  pod_name = variant == 'Default' ? 'EaseCallUIKit' : "EaseCallUIKit/#{variant}"
+  pod pod_name, :path => '../'
+end
+
+post_install do |installer|
+  minimum_ios = Gem::Version.new('15.0')
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      version = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+      if version && Gem::Version.new(version) < minimum_ios
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = minimum_ios.to_s
+      end
+    end
+  end
+end
